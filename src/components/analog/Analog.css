@@ -1,0 +1,266 @@
+.App.colorful .box {
+    position: relative;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-animation: animate 5s ease-in-out infinite;
+    animation: animate 5s ease-in-out infinite;
+    -webkit-animation-delay: -2.5s;
+    animation-delay: -2.5s;
+    overflow: hidden;
+}
+
+.App.colorful .box:after {
+    content: "";
+    -webkit-filter: blur(10px);
+    filter: blur(25px);
+    background-size: cover;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+}
+
+.App.colorful .clock.analog {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url("../../img/clock.png");
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    -webkit-filter: blur(10px);
+    filter: blur(0.7px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    border-right: none;
+    -webkit-box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 50px rgba(0, 0, 0, 0.2);
+}
+
+.App.colorful .analog.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+@-webkit-keyframes animate {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.analog.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #1766f8;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.analog.clock .hour,
+.analog.clock .min,
+.analog.clock .sec {
+    position: absolute;
+}
+
+.analog.clock .hour,
+.analog.clock .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.analog.clock .min,
+.analog.clock .mn {
+    width: 190px;
+    height: 190px;
+}
+
+.analog.clock .sec,
+.analog.clock .sc {
+    width: 230px;
+    height: 230px;
+}
+
+.analog.clock .hr,
+.analog.clock .mn,
+.analog.clock .sc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.analog.clock .hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #f17624;
+    z-index: 11;
+    border-radius: 6px;
+}
+
+.analog.clock .mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+.analog.clock .sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #1766f8;
+    z-index: 13;
+    border-radius: 6px;
+}
+
+.App.dark .analog.clock,
+.App.light .analog.clock {
+    width: 350px;
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.App.dark {
+    background: #091921;
+}
+
+.App.dark .analog.clock {
+    background: url("../../img/clock.png");
+    background-size: cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 20px 20px 20px rgba(0, 0, 0, 0.3), inset -8px -8px 15px rgba(255, 255, 255, 0.05), inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 20px 20px 20px rgba(0, 0, 0, 0.3), inset -8px -8px 15px rgba(255, 255, 255, 0.05), inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.App.dark .toggleClass {
+    background: #d1dae3;
+    color: #d1dae3;
+}
+
+.App.dark .toggleClass:before {
+    content: 'Light Mode';
+}
+
+.App.light {
+    background: #d1dae3;
+}
+
+.App.light .analog.clock {
+    background: #d1dae3 url("../../img/clock.png");
+    background-size: cover;
+    border: 4px solid #d1dae3;
+    border-radius: 50%;
+    -webkit-box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 420px) {
+    .App.colorful .box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .App.dark .analog.clock,
+    .App.light .analog.clock {
+        width: 250px;
+        height: 250px;
+    }
+
+    .analog.clock .hour,
+    .analog.clock .hr {
+        width: 140px;
+        height: 140px;
+    }
+
+    .analog.clock .min,
+    .analog.clock .mn {
+        width: 150px;
+        height: 150px;
+    }
+
+    .analog.clock .sec,
+    .analog.clock .sc {
+        width: 170px;
+        height: 170px;
+    }
+
+    .analog.clock .hr::before {
+        height: 70px;
+    }
+
+    .analog.clock .mn::before {
+        height: 80px;
+    }
+
+    .analog.clock .sc::before {
+        height: 100px;
+    }
+}
