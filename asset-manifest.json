@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clocks-React/static/css/main.f58d363a.chunk.css",
-    "main.js": "/clocks-React/static/js/main.052de0e8.chunk.js",
-    "main.js.map": "/clocks-React/static/js/main.052de0e8.chunk.js.map",
+    "main.js": "/clocks-React/static/js/main.0d50c5f7.chunk.js",
+    "main.js.map": "/clocks-React/static/js/main.0d50c5f7.chunk.js.map",
     "runtime-main.js": "/clocks-React/static/js/runtime-main.7af7be47.js",
     "runtime-main.js.map": "/clocks-React/static/js/runtime-main.7af7be47.js.map",
     "static/js/2.ed28a1d1.chunk.js": "/clocks-React/static/js/2.ed28a1d1.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.7af7be47.js",
     "static/js/2.ed28a1d1.chunk.js",
     "static/css/main.f58d363a.chunk.css",
-    "static/js/main.052de0e8.chunk.js"
+    "static/js/main.0d50c5f7.chunk.js"
   ]
 }
