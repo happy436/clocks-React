@@ -4,7 +4,6 @@ import Analog from "./components/analog/Analog";
 import Calendar from "./components/Calendar/Calendar.jsx"
 import Digital from "./components/digital/Digital.jsx"
 import {clockChangeActionCreator} from "./redux/clockReducer"
-import {dateActionCreator} from "./redux/dateReducer"
 
 function App(props) {
     let state = props.store.getState()
@@ -17,40 +16,33 @@ function App(props) {
     let minute = state.dateReducer.time.getMinutes()
     let second = state.dateReducer.time.getSeconds()
 
-    if(hour < 10){
-        hour = `0${hour}`
-    } else if(minute < 10){
-        minute = `0${minute}`
-    } else if(second < 10){
-        second = `0${second}`
-    }
+    let dispatch = props.store.dispatch
 
     let clocks = [
                 <Analog
                     hour={hour}
                     minute={minute}
                     second={second}
+                    dispatch={dispatch}
                 />,
                 <Digital
                     hour={hour}
                     minute={minute}
                     second={second}
+                    dispatch={dispatch}
                 />, 
                 <Calendar 
                     year={year}
                     month={monthIndex}
                     day={day}
+                    dispatch={dispatch}
                 />
             ]
     let ActiveTheme = state.themeReducer.themes[activeTheme]
 
-    window.state = state
-
     let changeClockFunk = () => {
         props.store.dispatch(clockChangeActionCreator())
     }
-
-    setInterval(() => {props.store.dispatch(dateActionCreator())},1000)
 
     return (
         <div className="AppWrapper">

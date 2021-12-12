@@ -1,7 +1,10 @@
 import React from "react"
 import "./Analog.css"
+import {dateActionCreator} from "../../redux/dateReducer"
 
 function Analog(props){
+
+    setInterval(() => {props.dispatch(dateActionCreator())},1000)
     
     const deg = 6
     let hh = props.hour * 30

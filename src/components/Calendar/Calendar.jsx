@@ -1,9 +1,13 @@
 import React from "react"
 import "./Calendar.css"
+import {dateActionCreator} from "../../redux/dateReducer"
 
 const months = ['January', "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 function Calendar(props){
+
+    setInterval(() => {props.dispatch(dateActionCreator())},43200000)
+    
     return(
         <div className="box calendar">
             <div className="clock">
