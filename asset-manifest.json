@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/clocks-React/static/css/main.f58d363a.chunk.css",
-    "main.js": "/clocks-React/static/js/main.2a78da30.chunk.js",
-    "main.js.map": "/clocks-React/static/js/main.2a78da30.chunk.js.map",
+    "main.js": "/clocks-React/static/js/main.fe2ffa31.chunk.js",
+    "main.js.map": "/clocks-React/static/js/main.fe2ffa31.chunk.js.map",
     "runtime-main.js": "/clocks-React/static/js/runtime-main.7af7be47.js",
     "runtime-main.js.map": "/clocks-React/static/js/runtime-main.7af7be47.js.map",
-    "static/js/2.ed28a1d1.chunk.js": "/clocks-React/static/js/2.ed28a1d1.chunk.js",
-    "static/js/2.ed28a1d1.chunk.js.map": "/clocks-React/static/js/2.ed28a1d1.chunk.js.map",
+    "static/js/2.da059cce.chunk.js": "/clocks-React/static/js/2.da059cce.chunk.js",
+    "static/js/2.da059cce.chunk.js.map": "/clocks-React/static/js/2.da059cce.chunk.js.map",
     "index.html": "/clocks-React/index.html",
     "static/css/main.f58d363a.chunk.css.map": "/clocks-React/static/css/main.f58d363a.chunk.css.map",
-    "static/js/2.ed28a1d1.chunk.js.LICENSE.txt": "/clocks-React/static/js/2.ed28a1d1.chunk.js.LICENSE.txt",
+    "static/js/2.da059cce.chunk.js.LICENSE.txt": "/clocks-React/static/js/2.da059cce.chunk.js.LICENSE.txt",
     "static/media/Digital.css": "/clocks-React/static/media/lcd.e56d7c0d.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.7af7be47.js",
-    "static/js/2.ed28a1d1.chunk.js",
+    "static/js/2.da059cce.chunk.js",
     "static/css/main.f58d363a.chunk.css",
-    "static/js/main.2a78da30.chunk.js"
+    "static/js/main.fe2ffa31.chunk.js"
   ]
 }
