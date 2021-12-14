@@ -5,11 +5,12 @@ import "./ToggleTheme.css"
 function ToggleThemeBtn(props){
 
     let changeTheme = () => {
-        props.store.dispatch(themeChangeActionCreator())
+        props.dispatch(themeChangeActionCreator())
+        localStorage.setItem('theme', props.state.activeTheme)
     }
 
     return(
-        <div className={`toggleClass ${props.ActiveTheme}`} onClick={changeTheme}>
+        <div className={`toggleClass ${props.loadTheme()}`} onClick={changeTheme}>
         </div>
     )
 }

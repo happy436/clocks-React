@@ -1,11 +1,12 @@
 const CHANGE_THEME = "CHANGE_THEME"
 
 let initialState = {
-    themes:["dark","light","colorful"],
+    themes:["dark", "light", "colorful"],
     activeTheme:0
 }
 
 const themeReducer = (state = initialState, action) => {
+    
     switch(action.type){
         case CHANGE_THEME:
             if(state.activeTheme < state.themes.length - 1){
@@ -18,6 +19,7 @@ const themeReducer = (state = initialState, action) => {
         default:
             return state
     }
+    
 }
 
 export const themeChangeActionCreator = () => {

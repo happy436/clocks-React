@@ -5,6 +5,7 @@ import {dateActionCreator} from "../../redux/dateReducer"
 function Analog(props){
 
     setInterval(() => {props.dispatch(dateActionCreator())},1000)
+    /* props.dispatch(dateActionCreator()) */
     
     const deg = 6
     let hh = props.hour * 30

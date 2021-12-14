@@ -7,7 +7,7 @@ import {clockChangeActionCreator} from "./redux/clockReducer"
 
 function App(props) {
     let state = props.store.getState()
-    let activeTheme = state.themeReducer.activeTheme
+    let activeThemeIndex = state.themeReducer.activeTheme
     let year = state.dateReducer.time.getFullYear()
     let monthIndex = state.dateReducer.time.getMonth() 
     let day = state.dateReducer.time.getDate()
@@ -38,20 +38,42 @@ function App(props) {
                     dispatch={dispatch}
                 />
             ]
-    let ActiveTheme = state.themeReducer.themes[activeTheme]
+    let ActiveTheme = state.themeReducer.themes[activeThemeIndex]
 
     let changeClockFunk = () => {
         props.store.dispatch(clockChangeActionCreator())
+        localStorage.setItem('clock', state.clockReducer.activeClock)
+    }
+
+    let loadClock = () => {
+        if(localStorage.getItem('clock')){
+            return clocks[localStorage.getItem('clock')]
+        } else {
+            return clocks[state.clockReducer.activeClock]
+        }
+    }
+
+    let loadTheme = () => {
+        if(localStorage.getItem('theme')){
+            return state.themeReducer.themes[localStorage.getItem('theme')]
+        } else {
+            return state.themeReducer.themes[state.themeReducer.activeTheme]
+        }
     }
 
     return (
         <div className="AppWrapper">
-            <div className={`App ${ActiveTheme}`} onClick={changeClockFunk}>
+            <div className={`App ${loadTheme()}`} onClick={changeClockFunk}>
                 <div className="container">
-                    {clocks[state.clockReducer.activeClock]}
+                    {loadClock()}
                 </div>
             </div>
-            <ToggleThemeBtn store={props.store} ActiveTheme={ActiveTheme}/>
+            <ToggleThemeBtn 
+                state={state.themeReducer}
+                dispatch={props.store.dispatch} 
+                ActiveTheme={ActiveTheme} 
+                loadTheme={loadTheme}
+            />
         </div>
     );
 }

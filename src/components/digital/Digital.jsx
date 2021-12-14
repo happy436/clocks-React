@@ -4,6 +4,9 @@ import {dateActionCreator} from "../../redux/dateReducer"
 
 function Digital(props){
 
+    setInterval(() => {props.dispatch(dateActionCreator())},1000)
+    /* props.dispatch(dateActionCreator()) */
+
     let hour = props.hour
     let minute = props.minute
     let second = props.second
@@ -16,8 +19,6 @@ function Digital(props){
     } else if(props.second < 10){
         second = `0${second}`
     }
-
-    setInterval(() => {props.dispatch(dateActionCreator())},1000)
 
     return(
         <div className="box digital">

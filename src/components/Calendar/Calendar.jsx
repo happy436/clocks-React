@@ -7,6 +7,8 @@ const months = ['January', "February", "March", "April", "May", "June", "July", 
 function Calendar(props){
 
     setInterval(() => {props.dispatch(dateActionCreator())},43200000)
+    /* props.dispatch(dateActionCreator()) */
+
     
     return(
         <div className="box calendar">
